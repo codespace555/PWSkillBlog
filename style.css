@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Abel', sans-serif;
+    box-sizing: border-box;
+}
+/* navbar style */
+#selectedBlogContent nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    height: 55px;
+   
+    padding: 0px 20px;
+}
+/* logo */
+.logo{
+    font-weight: bolder;
+    font-size: 25px;
+}
+/* addbth */
+.addBlog_btn button{
+    background: transparent;
+    border: none;
+
+}
+.addBlog_btn button i{
+
+    font-size: 25px;
+    font-weight: 900;
+}
+
+
+/* popup */
+
+.back{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    opacity:.8;
+    background: rgb(0,0,0,7);
+    display: none;
+}
+
+
+#myForm{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    text-align:center ;
+    background-color: aliceblue;
+    z-index: 2;
+    max-width: 500px;
+    height: 500px;
+    border-radius: 5px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+#closebtn{
+position: relative;
+left: 300px;
+top: -20px;
+width: 20px;
+background: transparent;
+border: none;
+cursor: pointer;
+}
+ 
+#closebtn i{
+    font-size: 18px;
+}
+
+
+.popup.active .back{
+display: block;
+}
+
+.popup.active #myForm{
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+
+}
+
+input{
+    width: 300px;
+    padding: 5px;
+    padding-left: 10px;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+
+input[type="submit"] {
+background-color: rgb(49, 49, 209);
+color: aliceblue;
+font-size: 16px;
+font-weight: 700;
+cursor: pointer;
+
+}
+textarea{
+    height: auto!important;
+    resize: none;
+    padding: 5px;
+    
+
+}
+
+/* btn raed */
+.card button{
+    background-color:red ;
+    padding: 5px;
+    width: 100px;
+    cursor: pointer;
+}
+
+#result{
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    padding: 5px;
+    flex-wrap: wrap;
+    
+}
+.card{
+    width: 300px;
+    /* border: 2px solid #000; */
+    height:400px ;
+    margin: 20px;
+    padding: 15px;
+    text-align: left;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    overflow: hidden;
+
+}
+#result img{
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    height: 250px;
+    margin-bottom: 20px;
+
+
+}
+p{
+    max-width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+/* read page */
+#readblog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.blog{
+    border: 2px solid rgb(131, 108, 108);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 1100px;
+    height: 100vh;
+
+}
+.head{
+    
+    display: flex;
+    background-color: rgb(53, 53, 182);
+    justify-content: space-between;
+    padding: 20px 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-radius: 10px;
+    /* width: 1000px; */
+    padding: 20px 20px;
+
+}
+.head img{
+    border-radius: 10px;
+    max-width:100%;
+    height: 200px;
+}
+.head_text{
+    color: white;
+    display: flex;
+    text-align: left;
+    gap: 20px;
+    flex-direction: column;
+    padding-right: 200px;
+}
+.blogcontant{
+padding: 20px 50px;
+overflow-y: scroll;
+height: 100vh;
+}
+
+.blogcontant::-webkit-scrollbar {
+    display: none;
+  }
+  
+  #selectedBlogContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    
+  }

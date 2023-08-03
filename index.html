@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Css Style Sheet link -->
+    <link rel="stylesheet" href="style.css" />
+    <title>PWSkills Blog</title>
+  </head>
+
+  <body>
+    <!-- navbar start -->
+    <div id="selectedBlogSection">
+      <div id="selectedBlogContent">
+    <nav>
+      <!-- ......logo...... -->
+      <div class="logo">PWSkills Blog</div>
+      <!-- ......Add Blog Button...... -->
+      <div class="addBlog_btn">
+        <button onclick="popupForm()"><i class="fa-solid fa-plus"></i></button>
+      </div>
+    </nav>
+    <!-- popUpform -->
+    <div class="popup" id="popup_form">
+      <div class="back"></div>
+
+      <form id="myForm">
+        <button id="closebtn" onclick="popupForm()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <input type="url" id="post_Url" required placeholder="Enter Blog Post URL:"/><br />
+
+        <input type="text" id="title" required placeholder="Enter Blog Title:"/><br />
+
+        <input type="text" id="discription" required placeholder="Enter Blog Discription"/><br />
+        <textarea name="blog_contant" id="blog_contant" cols="30" rows="10" placeholder="Write:"></textarea>
+
+        <input type="submit" value="Submit"/>
+      </form>
+    </div>
+    
+    <div id="result"></div>
+   
+   </div>
+  </div>
+   
+    
+    <!-- blog card -->
+   
+
+    <!-- fontawsome script -->
+    <script
+      src="https://kit.fontawesome.com/c54e034b6c.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- js file -->
+    <script src="script.js"></script>
+  </body>
+</html>
